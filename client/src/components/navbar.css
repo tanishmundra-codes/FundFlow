@@ -1,0 +1,212 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap');
+
+/* Reset */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #283681;
+    border-bottom: 1px solid rgba(40, 54, 129, 0.5);
+    box-shadow: 0 6px 20px rgba(40, 54, 129, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.logo p {
+    margin: 0;
+}
+
+/* Pages */
+.pages {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.pages a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.pages a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Desktop Login Buttons */
+.login-section {
+    display: flex;
+    gap: 12px;
+}
+
+.login-section button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.login-section a:first-child button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-section a:first-child button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.login-section a:last-child button {
+    background-color: white;
+    color: #283681;
+    border: 1px solid white;
+}
+
+.login-section a:last-child button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+}
+
+/* Mobile login section inside menu */
+.login-section-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Style mobile buttons same as desktop */
+.login-section-mobile a button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+/* Log In Button - mobile */
+.login-section-mobile a:first-child button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-section-mobile a:first-child button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Sign Up Button - mobile */
+.login-section-mobile a:last-child button {
+    background-color: white;
+    color: #283681;
+    border: 1px solid white;
+}
+
+.login-section-mobile a:last-child button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .pages {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #283681;
+        align-items: center;
+        padding: 16px 0;
+        display: none;
+        z-index: 10;
+        box-shadow: 0 6px 20px rgba(40, 54, 129, 0.5);
+    }
+
+    .pages.open {
+        display: flex;
+    }
+
+    .pages ul {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .login-section {
+        display: none;
+    }
+
+    .login-section-mobile {
+        display: flex;
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    .login-section-mobile a button {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
